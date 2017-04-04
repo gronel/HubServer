@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="COREDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="appool_applicant">
+          <Key>
+            <PropertyRef Name="applicant_id" />
+          </Key>
+          <Property Name="applicant_id" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="empl_id" Type="varchar" MaxLength="20" />
+          <Property Name="last_name" Type="varchar" MaxLength="50" />
+          <Property Name="first_name" Type="varchar" MaxLength="50" />
+          <Property Name="middle_name" Type="varchar" MaxLength="50" />
+          <Property Name="date_hired" Type="datetime" />
+          <Property Name="company_code" Type="varchar" MaxLength="10" />
+          <Property Name="branch_code" Type="varchar" MaxLength="10" />
+          <Property Name="tin" Type="varchar" MaxLength="20" />
+          <Property Name="sss" Type="varchar" MaxLength="20" />
+          <Property Name="gsis" Type="varchar" MaxLength="20" />
+          <Property Name="hdmf" Type="varchar" MaxLength="20" />
+          <Property Name="philhealth" Type="varchar" MaxLength="20" />
+          <Property Name="birth_date" Type="datetime" />
+          <Property Name="citizenship" Type="varchar" MaxLength="20" />
+          <Property Name="religion" Type="varchar" MaxLength="20" />
+          <Property Name="sex" Type="varchar" MaxLength="10" />
+          <Property Name="civil_status" Type="varchar" MaxLength="10" />
+          <Property Name="blood_type" Type="varchar" MaxLength="10" />
+          <Property Name="height" Type="varchar" MaxLength="10" />
+          <Property Name="weight" Type="varchar" MaxLength="10" />
+          <Property Name="home_house_no" Type="varchar" MaxLength="10" />
+          <Property Name="home_street" Type="varchar" MaxLength="30" />
+          <Property Name="home_building" Type="varchar" MaxLength="20" />
+          <Property Name="home_barangay" Type="varchar" MaxLength="30" />
+          <Property Name="home_town" Type="varchar" MaxLength="50" />
+          <Property Name="home_province" Type="varchar" MaxLength="50" />
+          <Property Name="home_zip" Type="varchar" MaxLength="15" />
+          <Property Name="home_country" Type="varchar" MaxLength="15" />
+          <Property Name="created_by" Type="varchar" MaxLength="30" />
+          <Property Name="create_date" Type="datetime" />
+          <Property Name="modified_by" Type="varchar" MaxLength="30" />
+          <Property Name="modify_date" Type="datetime" />
+          <Property Name="email_address" Type="varchar" MaxLength="30" />
+          <Property Name="applicant_status" Type="varchar" MaxLength="1" />
+          <Property Name="attachment" Type="varchar" MaxLength="100" />
+          <Property Name="contact_telno" Type="varchar" MaxLength="20" />
+          <Property Name="contact_celno" Type="varchar" MaxLength="20" />
+          <Property Name="howtheyknow" Type="varchar" MaxLength="200" />
+          <Property Name="posicode" Type="varchar" MaxLength="10" />
+          <Property Name="application_date" Type="datetime" />
+          <Property Name="area" Type="varchar" MaxLength="20" />
+          <Property Name="persontosee" Type="varchar" MaxLength="50" />
+          <Property Name="describe_your_self" Type="varchar" MaxLength="500" />
+          <Property Name="skill" Type="varchar" MaxLength="200" />
+          <Property Name="news_via_email" Type="bit" />
+          <Property Name="news_via_mobile" Type="bit" />
+          <Property Name="submitted_reqt" Type="tinyint" />
+          <Property Name="remarks_reqt" Type="varchar" MaxLength="100" />
+          <Property Name="jobid" Type="int" Nullable="false" />
+          <Property Name="isacknowledge" Type="tinyint" />
+          <Property Name="channel" Type="varchar" MaxLength="20" />
+          <Property Name="rating" Type="int" />
+          <Property Name="father_fname" Type="varchar" MaxLength="20" />
+          <Property Name="father_lname" Type="varchar" MaxLength="20" />
+          <Property Name="father_bdate" Type="datetime" />
+          <Property Name="mother_fname" Type="varchar" MaxLength="20" />
+          <Property Name="mother_lname" Type="varchar" MaxLength="20" />
+          <Property Name="mother_bdate" Type="datetime" />
+          <Property Name="birth_place" Type="varchar" MaxLength="30" />
+          <Property Name="nickname" Type="varchar" MaxLength="10" />
+          <Property Name="emergency_contact_person" Type="varchar" MaxLength="20" />
+          <Property Name="emergency_person_ralationship" Type="varchar" MaxLength="20" />
+          <Property Name="emergency_contact_number" Type="varchar" MaxLength="30" />
+          <Property Name="spouse_fname" Type="varchar" MaxLength="20" />
+          <Property Name="spouse_lname" Type="varchar" MaxLength="20" />
+          <Property Name="spouse_bdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="appool_booking">
+          <Key>
+            <PropertyRef Name="applicant_id" />
+          </Key>
+          <Property Name="applicant_id" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="exam_date" Type="date" />
+          <Property Name="exam_time" Type="time" Precision="7" />
+          <Property Name="examiner" Type="varchar" MaxLength="20" />
+          <Property Name="exam_attend" Type="int" />
+          <Property Name="exam_crea_date" Type="datetime" />
+          <Property Name="exam_crea_by" Type="varchar" MaxLength="30" />
+          <Property Name="exam_result1" Type="varchar" MaxLength="20" />
+          <Property Name="exam_result2" Type="varchar" MaxLength="20" />
+          <Property Name="exam_passed" Type="tinyint" />
+          <Property Name="interview_date" Type="date" />
+          <Property Name="interview_time" Type="time" Precision="7" />
+          <Property Name="interviewer" Type="varchar" MaxLength="20" />
+          <Property Name="interview_attend" Type="int" />
+          <Property Name="interview_crea_date" Type="datetime" />
+          <Property Name="interview_crea_by" Type="varchar" MaxLength="30" />
+          <Property Name="interview_passed" Type="tinyint" />
+          <Property Name="interview_result" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'COREDB.dbo.appool_checkin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="appool_checkin">
+          <Key>
+            <PropertyRef Name="login_id" />
+            <PropertyRef Name="login_date" />
+          </Key>
+          <Property Name="login_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="applicant_id" Type="varchar" MaxLength="15" />
+          <Property Name="login_date" Type="datetime" Nullable="false" />
+          <Property Name="purpose" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="core_chat">
+          <Key>
+            <PropertyRef Name="chatId" />
+          </Key>
+          <Property Name="chatId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="msgfrom" Type="varchar" MaxLength="10" />
+          <Property Name="msgto" Type="varchar" MaxLength="10" />
+          <Property Name="msg" Type="varchar" MaxLength="150" />
+          <Property Name="createdby" Type="varchar" MaxLength="50" />
+          <Property Name="createddate" Type="datetime" />
+          <Property Name="isread" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'COREDB.dbo.appool_ApplicantCheckIn' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="appool_ApplicantCheckIn">
+          <Key>
+            <PropertyRef Name="login_id" />
+            <PropertyRef Name="login_date" />
+          </Key>
+          <Property Name="login_id" Type="int" Nullable="false" />
+          <Property Name="applicant_id" Type="varchar" MaxLength="15" />
+          <Property Name="login_date" Type="datetime" Nullable="false" />
+          <Property Name="purpose" Type="varchar" MaxLength="30" />
+          <Property Name="applicant_name" Type="varchar" MaxLength="101" />
+        </EntityType>
+        <Function Name="Sproc_AppoolCheckIn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="applicant_id" Type="varchar" Mode="In" />
+          <Parameter Name="purpose" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="COREDBModel1StoreContainer">
+          <EntitySet Name="appool_applicant" EntityType="Self.appool_applicant" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="appool_booking" EntityType="Self.appool_booking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="core_chat" EntityType="Self.core_chat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="appool_checkin" EntityType="Self.appool_checkin" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [appool_checkin].[login_id] AS [login_id], 
+    [appool_checkin].[applicant_id] AS [applicant_id], 
+    [appool_checkin].[login_date] AS [login_date], 
+    [appool_checkin].[purpose] AS [purpose]
+    FROM [dbo].[appool_checkin] AS [appool_checkin]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="appool_ApplicantCheckIn" EntityType="Self.appool_ApplicantCheckIn" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [appool_ApplicantCheckIn].[login_id] AS [login_id], 
+    [appool_ApplicantCheckIn].[applicant_id] AS [applicant_id], 
+    [appool_ApplicantCheckIn].[login_date] AS [login_date], 
+    [appool_ApplicantCheckIn].[purpose] AS [purpose], 
+    [appool_ApplicantCheckIn].[applicant_name] AS [applicant_name]
+    FROM [dbo].[appool_ApplicantCheckIn] AS [appool_ApplicantCheckIn]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="COREDBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="appool_applicant">
+          <Key>
+            <PropertyRef Name="applicant_id" />
+          </Key>
+          <Property Name="applicant_id" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="empl_id" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="middle_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="date_hired" Type="DateTime" Precision="3" />
+          <Property Name="company_code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="branch_code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="tin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="sss" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gsis" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="hdmf" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="philhealth" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="birth_date" Type="DateTime" Precision="3" />
+          <Property Name="citizenship" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="religion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="sex" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="civil_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="blood_type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="height" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="weight" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="home_house_no" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="home_street" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="home_building" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="home_barangay" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="home_town" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="home_province" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="home_zip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="home_country" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="created_by" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="create_date" Type="DateTime" Precision="3" />
+          <Property Name="modified_by" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="modify_date" Type="DateTime" Precision="3" />
+          <Property Name="email_address" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="applicant_status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="attachment" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="contact_telno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="contact_celno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="howtheyknow" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="posicode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="application_date" Type="DateTime" Precision="3" />
+          <Property Name="area" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="persontosee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="describe_your_self" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="skill" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="news_via_email" Type="Boolean" />
+          <Property Name="news_via_mobile" Type="Boolean" />
+          <Property Name="submitted_reqt" Type="Byte" />
+          <Property Name="remarks_reqt" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="jobid" Type="Int32" Nullable="false" />
+          <Property Name="isacknowledge" Type="Byte" />
+          <Property Name="channel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="rating" Type="Int32" />
+          <Property Name="father_fname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="father_lname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="father_bdate" Type="DateTime" Precision="3" />
+          <Property Name="mother_fname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="mother_lname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="mother_bdate" Type="DateTime" Precision="3" />
+          <Property Name="birth_place" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="nickname" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="emergency_contact_person" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="emergency_person_ralationship" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="emergency_contact_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="spouse_fname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="spouse_lname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="spouse_bdate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="appool_booking">
+          <Key>
+            <PropertyRef Name="applicant_id" />
+          </Key>
+          <Property Name="applicant_id" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="exam_date" Type="DateTime" Precision="0" />
+          <Property Name="exam_time" Type="Time" Precision="7" />
+          <Property Name="examiner" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="exam_attend" Type="Int32" />
+          <Property Name="exam_crea_date" Type="DateTime" Precision="3" />
+          <Property Name="exam_crea_by" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="exam_result1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="exam_result2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="exam_passed" Type="Byte" />
+          <Property Name="interview_date" Type="DateTime" Precision="0" />
+          <Property Name="interview_time" Type="Time" Precision="7" />
+          <Property Name="interviewer" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="interview_attend" Type="Int32" />
+          <Property Name="interview_crea_date" Type="DateTime" Precision="3" />
+          <Property Name="interview_crea_by" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="interview_passed" Type="Byte" />
+          <Property Name="interview_result" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="appool_checkin">
+          <Key>
+            <PropertyRef Name="login_id" />
+            <PropertyRef Name="login_date" />
+          </Key>
+          <Property Name="login_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="applicant_id" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="login_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="purpose" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="ApplicantDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="appool_applicant" EntityType="Self.appool_applicant" />
+          <EntitySet Name="appool_booking" EntityType="Self.appool_booking" />
+          <EntitySet Name="appool_checkin" EntityType="Self.appool_checkin" />
+          <EntitySet Name="appool_ApplicantCheckIn" EntityType="COREDBModel1.appool_ApplicantCheckIn" />
+          <FunctionImport Name="Sproc_AppoolCheckIn">
+            <Parameter Name="applicant_id" Mode="In" Type="String" />
+            <Parameter Name="purpose" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="core_chat" EntityType="COREDBModel1.core_chat" />
+        </EntityContainer>
+        <EntityType Name="appool_ApplicantCheckIn">
+          <Key>
+            <PropertyRef Name="login_id" />
+            <PropertyRef Name="login_date" />
+          </Key>
+          <Property Name="login_id" Type="Int32" Nullable="false" />
+          <Property Name="applicant_id" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="login_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="purpose" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="applicant_name" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="core_chat">
+          <Key>
+            <PropertyRef Name="chatId" />
+          </Key>
+          <Property Name="chatId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="msgfrom" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="msgto" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="msg" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="createddate" Type="DateTime" Precision="3" />
+          <Property Name="isread" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="COREDBModel1StoreContainer" CdmEntityContainer="ApplicantDBEntities">
+          <EntitySetMapping Name="appool_applicant">
+            <EntityTypeMapping TypeName="COREDBModel1.appool_applicant">
+              <MappingFragment StoreEntitySet="appool_applicant">
+                <ScalarProperty Name="applicant_id" ColumnName="applicant_id" />
+                <ScalarProperty Name="empl_id" ColumnName="empl_id" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="middle_name" ColumnName="middle_name" />
+                <ScalarProperty Name="date_hired" ColumnName="date_hired" />
+                <ScalarProperty Name="company_code" ColumnName="company_code" />
+                <ScalarProperty Name="branch_code" ColumnName="branch_code" />
+                <ScalarProperty Name="tin" ColumnName="tin" />
+                <ScalarProperty Name="sss" ColumnName="sss" />
+                <ScalarProperty Name="gsis" ColumnName="gsis" />
+                <ScalarProperty Name="hdmf" ColumnName="hdmf" />
+                <ScalarProperty Name="philhealth" ColumnName="philhealth" />
+                <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+                <ScalarProperty Name="citizenship" ColumnName="citizenship" />
+                <ScalarProperty Name="religion" ColumnName="religion" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="civil_status" ColumnName="civil_status" />
+                <ScalarProperty Name="blood_type" ColumnName="blood_type" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="home_house_no" ColumnName="home_house_no" />
+                <ScalarProperty Name="home_street" ColumnName="home_street" />
+                <ScalarProperty Name="home_building" ColumnName="home_building" />
+                <ScalarProperty Name="home_barangay" ColumnName="home_barangay" />
+                <ScalarProperty Name="home_town" ColumnName="home_town" />
+                <ScalarProperty Name="home_province" ColumnName="home_province" />
+                <ScalarProperty Name="home_zip" ColumnName="home_zip" />
+                <ScalarProperty Name="home_country" ColumnName="home_country" />
+                <ScalarProperty Name="created_by" ColumnName="created_by" />
+                <ScalarProperty Name="create_date" ColumnName="create_date" />
+                <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+                <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+                <ScalarProperty Name="email_address" ColumnName="email_address" />
+                <ScalarProperty Name="applicant_status" ColumnName="applicant_status" />
+                <ScalarProperty Name="attachment" ColumnName="attachment" />
+                <ScalarProperty Name="contact_telno" ColumnName="contact_telno" />
+                <ScalarProperty Name="contact_celno" ColumnName="contact_celno" />
+                <ScalarProperty Name="howtheyknow" ColumnName="howtheyknow" />
+                <ScalarProperty Name="posicode" ColumnName="posicode" />
+                <ScalarProperty Name="application_date" ColumnName="application_date" />
+                <ScalarProperty Name="area" ColumnName="area" />
+                <ScalarProperty Name="persontosee" ColumnName="persontosee" />
+                <ScalarProperty Name="describe_your_self" ColumnName="describe_your_self" />
+                <ScalarProperty Name="skill" ColumnName="skill" />
+                <ScalarProperty Name="news_via_email" ColumnName="news_via_email" />
+                <ScalarProperty Name="news_via_mobile" ColumnName="news_via_mobile" />
+                <ScalarProperty Name="submitted_reqt" ColumnName="submitted_reqt" />
+                <ScalarProperty Name="remarks_reqt" ColumnName="remarks_reqt" />
+                <ScalarProperty Name="jobid" ColumnName="jobid" />
+                <ScalarProperty Name="isacknowledge" ColumnName="isacknowledge" />
+                <ScalarProperty Name="channel" ColumnName="channel" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="father_fname" ColumnName="father_fname" />
+                <ScalarProperty Name="father_lname" ColumnName="father_lname" />
+                <ScalarProperty Name="father_bdate" ColumnName="father_bdate" />
+                <ScalarProperty Name="mother_fname" ColumnName="mother_fname" />
+                <ScalarProperty Name="mother_lname" ColumnName="mother_lname" />
+                <ScalarProperty Name="mother_bdate" ColumnName="mother_bdate" />
+                <ScalarProperty Name="birth_place" ColumnName="birth_place" />
+                <ScalarProperty Name="nickname" ColumnName="nickname" />
+                <ScalarProperty Name="emergency_contact_person" ColumnName="emergency_contact_person" />
+                <ScalarProperty Name="emergency_person_ralationship" ColumnName="emergency_person_ralationship" />
+                <ScalarProperty Name="emergency_contact_number" ColumnName="emergency_contact_number" />
+                <ScalarProperty Name="spouse_fname" ColumnName="spouse_fname" />
+                <ScalarProperty Name="spouse_lname" ColumnName="spouse_lname" />
+                <ScalarProperty Name="spouse_bdate" ColumnName="spouse_bdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="appool_booking">
+            <EntityTypeMapping TypeName="COREDBModel1.appool_booking">
+              <MappingFragment StoreEntitySet="appool_booking">
+                <ScalarProperty Name="applicant_id" ColumnName="applicant_id" />
+                <ScalarProperty Name="exam_date" ColumnName="exam_date" />
+                <ScalarProperty Name="exam_time" ColumnName="exam_time" />
+                <ScalarProperty Name="examiner" ColumnName="examiner" />
+                <ScalarProperty Name="exam_attend" ColumnName="exam_attend" />
+                <ScalarProperty Name="exam_crea_date" ColumnName="exam_crea_date" />
+                <ScalarProperty Name="exam_crea_by" ColumnName="exam_crea_by" />
+                <ScalarProperty Name="exam_result1" ColumnName="exam_result1" />
+                <ScalarProperty Name="exam_result2" ColumnName="exam_result2" />
+                <ScalarProperty Name="exam_passed" ColumnName="exam_passed" />
+                <ScalarProperty Name="interview_date" ColumnName="interview_date" />
+                <ScalarProperty Name="interview_time" ColumnName="interview_time" />
+                <ScalarProperty Name="interviewer" ColumnName="interviewer" />
+                <ScalarProperty Name="interview_attend" ColumnName="interview_attend" />
+                <ScalarProperty Name="interview_crea_date" ColumnName="interview_crea_date" />
+                <ScalarProperty Name="interview_crea_by" ColumnName="interview_crea_by" />
+                <ScalarProperty Name="interview_passed" ColumnName="interview_passed" />
+                <ScalarProperty Name="interview_result" ColumnName="interview_result" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="appool_checkin">
+            <EntityTypeMapping TypeName="COREDBModel1.appool_checkin">
+              <MappingFragment StoreEntitySet="appool_checkin">
+                <ScalarProperty Name="login_id" ColumnName="login_id" />
+                <ScalarProperty Name="applicant_id" ColumnName="applicant_id" />
+                <ScalarProperty Name="login_date" ColumnName="login_date" />
+                <ScalarProperty Name="purpose" ColumnName="purpose" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="appool_ApplicantCheckIn">
+            <EntityTypeMapping TypeName="COREDBModel1.appool_ApplicantCheckIn">
+              <MappingFragment StoreEntitySet="appool_ApplicantCheckIn">
+                <ScalarProperty Name="applicant_name" ColumnName="applicant_name" />
+                <ScalarProperty Name="purpose" ColumnName="purpose" />
+                <ScalarProperty Name="login_date" ColumnName="login_date" />
+                <ScalarProperty Name="applicant_id" ColumnName="applicant_id" />
+                <ScalarProperty Name="login_id" ColumnName="login_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Sproc_AppoolCheckIn" FunctionName="COREDBModel1.Store.Sproc_AppoolCheckIn" />
+          <EntitySetMapping Name="core_chat">
+            <EntityTypeMapping TypeName="COREDBModel1.core_chat">
+              <MappingFragment StoreEntitySet="core_chat">
+                <ScalarProperty Name="isread" ColumnName="isread" />
+                <ScalarProperty Name="createddate" ColumnName="createddate" />
+                <ScalarProperty Name="createdby" ColumnName="createdby" />
+                <ScalarProperty Name="msg" ColumnName="msg" />
+                <ScalarProperty Name="msgto" ColumnName="msgto" />
+                <ScalarProperty Name="msgfrom" ColumnName="msgfrom" />
+                <ScalarProperty Name="chatId" ColumnName="chatId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
